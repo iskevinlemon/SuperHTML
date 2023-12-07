@@ -8,21 +8,38 @@
 </head>
 <body superHTMLController="myController">
 
+    <!-- 
+        When the form is submitted,
+        the url will be ?age={value}
+        {value} - value entered into the input field
+    -->
+    <form>
+        <label for="age">Enter age</label>
+        <input type="number" name="age">
+        <input type="submit">
+    </form>
+
     <h1>@{result}</h1>
 
     <script>
     var s = SuperHTML;
     s.controller("myController");
 
-    var age = 9;
+    // Get age from url param
+    var age = new URLSearchParams(window.location.search).get('age');
+
     var result;
 
-    if(age >= 18){
-        result = "I can drive";
+    if(age != null){
+
+        if(age >= 18){
+            result = "I can drive";
+        }
+        else{
+            result = "I can't drive";
+        }
     }
-    else{
-        result = "I can't drive";
-    }
+    
     
     s.compile();
     </script>
