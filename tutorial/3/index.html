@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3: JavaScript expression in HTML</title>
+    <script src="/super-html.js"></script>
+</head>
+<body superHTMLController="myController">
+
+    <!--  Evaluating expression inside @{} tag  -->
+    <h1>@{1+1}</h1>
+
+    <!--  Callling Math.random() inside @{} tag  -->
+    <h1>@{Math.random()}</h1>
+
+    <script>
+    var s = SuperHTML;
+    s.controller("myController");
+    s.compile();
+    </script>
+
+</body>
+</html>
