@@ -10,6 +10,7 @@ Bind JavaScript to HTML with minimal syntax.
 
 # Setting up
 **How to correctly setup SuperHTML** <br/>
+View the docs <a href="superhtml.netlify.app/" target="_blank">here</a>
 ```html
 <!DOCTYPE html>
 <html lang="en">
